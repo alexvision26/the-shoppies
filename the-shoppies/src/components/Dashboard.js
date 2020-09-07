@@ -31,6 +31,7 @@ function Dashboard() {
     
     return (
         <>
+        <div className="container">
         <h1>Nominated Titles:</h1>
         <div className="noms-container">
         {myNoms.map(movie => {
@@ -45,7 +46,7 @@ function Dashboard() {
             )
         })}
         </div>
-        
+        </div>
         </>
     )
 }
