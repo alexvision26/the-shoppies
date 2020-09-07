@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+}
+
+.login-container {
+    background-image: url("https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    height: 100vh;
+
+    h1 {
+        font-family: 'Pacifico', cursive;
+        color: white;
+        font-size: 7rem;
+        text-shadow: 2px 4px 9px rgba(0, 0, 0, 0.658);
+        // margin: auto;
+    }
+}
+
+.landing-page {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5%;
+    margin: auto 0;
+    width: 80%;
+}
+
+.login-form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.5%;
+    width: 30%;
+}
+
+.login {
+    display:flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    align-content: flex-start;
+    width: 100%;
+
+    button {
+        margin-top: 6%;
+        width: 30%;
+    }
+
+    input {
+        width: 100%;
+    }
+}

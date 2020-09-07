@@ -1,6 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import "./App.scss";
+import PrivateRoute from './helpers/PrivateRoute';
+import Dashboard from './components/Dashboard';
+import Landing from './components/Landing';
+
+import MoviesContainer from './components/MoviesContainer';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 //http://img.omdbapi.com/?apikey=f2c699d1&
 
@@ -10,25 +22,13 @@ import "./App.scss";
 
 function App() {
 
-  // const [movieSearch, setMovieSearch] = useState("")
-  const [searchTerm, setSearchTerm] = useState("")
   const [noms, setNoms] = useState({})
-
   const [isResults, setIsResults] = useState(false)
+  const [searchTerm, setSearchTerm] = useState("")
   const [movie, setMovie] = useState({})
-
-  useEffect(() => {
-    axios.get('').then(res => {
-      console.log(res)
-    }).catch(err => {
-      console.log(err)
-    })
-
-  }, [])
 
   const handleChange = e => {
     setSearchTerm(e.target.value)
-    console.log(searchTerm)
   }
 
   const handleSearch = e => {
@@ -44,33 +44,37 @@ function App() {
     })
   }
 
-
   return (
-    <div className="App">
-      <h1>The Shoppies</h1>
-      <div className="navbar">
-        <form className="searchbar">
-          <input id="movie-search" onChange={handleChange}></input>
-          <button onClick={handleSearch} >Search</button>
-        </form>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/welcome">
+            <Landing/>
+          </Route>
+
+          {/* <Route exact path="/" component={MoviesContainer}/> */}
+
+          <Route path="/">
+            
+              <div className="navbar">
+                <h1>The Shoppies</h1>
+                  <form className="searchbar">
+                    <input id="movie-search" onChange={handleChange}></input>
+                    <button onClick={handleSearch} >Search</button>
+                  </form>
+              </div>
+              <Route exact path="/">
+                <MoviesContainer movie={movie} isResults={isResults}/>
+              </Route>
+              <Route path="/dashboard">
+                <Dashboard/>
+              </Route>
+          </Route>
+
+        </Switch>
+        
       </div>
-
-      {isResults ? <div className="results">
-        <h2>Results:</h2>
-        <div className="full-card">
-            <div className="movie-card" style={{backgroundImage: `url(${movie.Poster})`}}></div>
-          
-            <div className="details">
-              <h2>{movie.Title}</h2>
-              <p>{movie.Year} <span className="rating">{movie.Rated}</span> {movie.Runtime}</p>
-              <p>Cast: {movie.Actors}<br/> Director: {movie.Director}<br/> {movie.Genre}</p>
-              <p></p>
-              <p></p>
-            </div>
-
-          </div>
-      </div> : <></>}
-    </div>
+    </Router>
   );
 }
 
