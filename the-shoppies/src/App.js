@@ -32,7 +32,7 @@ function App() {
   const handleSearch = e => {
     e.preventDefault()
 
-    axios.get(`http://omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${searchTerm}`).then(res => {
+    axios.get(`https://omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${searchTerm}`).then(res => {
       setIsResults(true)
       setMovie(res.data)
       // console.log(res.data)
