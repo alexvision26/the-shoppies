@@ -23,8 +23,6 @@ import {
 
 function App() {
 
-  console.log(React.version)
-
   const history = useHistory();
 
   console.log(history)
