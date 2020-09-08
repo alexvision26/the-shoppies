@@ -60,7 +60,7 @@ function App() {
             
               <div className="navbar">
                 <div className="logo">
-                <h1>The Shoppies</h1>
+                  <h1>The Shoppies</h1>
                 </div>
 
                 <form className="searchbar">
