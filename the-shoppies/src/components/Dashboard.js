@@ -32,8 +32,10 @@ function Dashboard() {
     return (
         <>
         <div className="container">
+        <div className="noms-overlay">
         <h1>Nominated Titles:</h1>
         <div className="noms-container">
+            
         {myNoms.map(movie => {
             return (
                 <>
@@ -45,6 +47,7 @@ function Dashboard() {
                 </>
             )
         })}
+        </div>
         </div>
         </div>
         </>
