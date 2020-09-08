@@ -24,7 +24,14 @@ function MoviesContainer(props) {
             </div>
 
           </div>
-      </div> : <></>}
+      </div> : <>
+        <div className="intro">
+          <div className="text">
+            <h1>Welcome to <span className="shop-title">The Shoppies!</span> <br/>We are a community platform where you can vote for your favorite movies to win awards.</h1>
+            <h1>Use the search bar above to find your favorite movies and nominate them.</h1>
+          </div>
+        </div>
+      </>}
       </div>
       </>
     )
