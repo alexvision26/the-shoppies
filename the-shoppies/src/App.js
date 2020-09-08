@@ -60,7 +60,8 @@ function App() {
             
               <div className="navbar">
                 <div className="logo">
-                  <h1>The Shoppies</h1>
+                  {/* <h1>The Shoppies</h1> */}
+                  <img src="https://i.imgur.com/yuKvB3M.png"/>
                 </div>
 
                 <form className="searchbar">
