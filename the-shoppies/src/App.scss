@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+html {
+    background-color: black;
+}
+
 h1 {
     text-align: center;
     margin: 0;
@@ -16,7 +20,7 @@ h1 {
     width: 100%;
     background-color: rgb(189, 189, 189);
     height: 100%;
-    padding: 1px 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -31,30 +35,43 @@ h1 {
     .logo {
         width: 15%;
         margin-left: 2%;
+        width:20%;
+        
 
-        h1 {
-            color: white;
+        img {
             width: 100%;
-            padding: 1% 0% 2%;
-            background-color: #96bf48;
-            border-radius: 15px;
-            font-size: 3rem;
-            font-family: 'Pacifico', cursive;
-            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
-            white-space: nowrap;
-
-            @media only screen and (max-width: 1600px) {
-                font-size: 2.4rem;
-                padding-left: 1%;
-                margin-left: 2%;
-            }
+            border-radius: 20px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.301);
+            margin: 1% auto;
 
             @media only screen and (max-width: 800px) {
-                padding: 0;
-                margin: 0;
+                width: 50%;
             }
-
         }
+
+        // h1 {
+        //     color: white;
+        //     width: 100%;
+        //     padding: 1% 0% 2%;
+        //     background-color: #96bf48;
+        //     border-radius: 15px;
+        //     font-size: 3rem;
+        //     font-family: 'Pacifico', cursive;
+        //     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+        //     white-space: nowrap;
+
+        //     @media only screen and (max-width: 1600px) {
+        //         font-size: 2.4rem;
+        //         padding-left: 1%;
+        //         margin-left: 2%;
+        //     }
+
+        //     @media only screen and (max-width: 800px) {
+        //         padding: 0;
+        //         margin: 0;
+        //     }
+
+        // }
 
         @media only screen and (max-width: 800px) {
             text-align: center;
@@ -254,9 +271,8 @@ h1 {
 
 .intro {
     height: 100%;
-    // padding: 4% 0;
-    // margin: auto;
-    // left: 50%;
+    margin: 0;
+    padding: 0;
     background-color: black;
     background-image: url("https://images.pexels.com/photos/2098604/pexels-photo-2098604.jpeg?cs=srgb&dl=pexels-engin-akyurt-2098604.jpg&fm=jpg");
     background-size: contain;
@@ -272,6 +288,16 @@ h1 {
         margin-left: 7%;
         padding: 2% 1%;
         border-radius: 15px;
+
+        @media only screen and (max-width: 1000px) {
+            width: 80%;
+            margin: 1% auto;
+            padding: 0;
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
 
         .shop-title {
             color: #96bf48;
